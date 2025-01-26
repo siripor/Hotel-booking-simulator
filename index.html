@@ -7,45 +7,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-    <div class="narbar"><!--narbar-->
-        <h3>ตั๋วเครื่องบิน+ที่พัก</h3>
-        <h3>ที่พัก</h3>
-        <div>
-            <h3>บริการเดินทางขนส่ง</h3>
-        <select name="" id="">
-            <option value="">ตั๋วเครื่องบิน</option>
-            <option value="">รถบัส</option>
-            <option value="">รถไฟ</option>
-            <option value="">เรือเฟอร์รารี่</option>
-            <option value="">บริการรับส่งสนามบิน</option>
-            <option value="">บริการเช่ารถ</option>
-        </select>
-        <div>
-        <img src="image/more.png" width="35" height="35" >
+       <div class="container">
+        <div class="narbar"><!--narbar-->
+          <div class="narbar1">
+                <button id="accommodationFlightButton">ตั๋วเครื่องบิน+ที่พัก</button>
+                 <button id="accommodationBtn">ที่พัก</button>
+               <div>
+                
+                   <select class="transport" >
+                   <option value="">บริการเดินทางขนส่ง</option>
+                   <option value="">ตั๋วเครื่องบิน</option>
+                   <option value="">รถบัส</option>
+                   <option value="">รถไฟ</option>
+                   <option value="">เรือเฟอร์รารี่</option>
+                   <option value="">บริการรับส่งสนามบิน</option>
+                   <option value="">บริการเช่ารถ</option>
+                   </select>
+               </div>
+
+                <div>
+                    <button>
+                    <!-- ปุ่มรูปภาพ -->
+                    <img src="image/more.png" width="30px"  height="30px" id="menuTrigger">
+                    </button>
+                    <!-- เมนูแบบ Select 
+                    <select id="menuSelect">
+                        <option value="tours">ทัวร์และตั๋วท่องเที่ยว</option>
+                        <option value="discounts">คูปองส่วนลด + ข้อเสนอพิเศษ</option>
+                        <option value="esim">eSim (ซิมดิจิทัล)</option>
+                        <option value="guide">คู่มือท่องเที่ยว</option>
+                    </select>-->
+                </div>
+            </div>
+           
+        
+             <div class="narbar2">
+                 <img src="image/thailand.png"width="35" height="35">
+        
+                  <img src="image/bath.png" width="35" height="35">
+        
+                  <a href="register.html" target="_blank" rel="noopener noreferrer" class="register">สมัครสมาชิก</a><!--สมัครสมาชิก-->
+
+                  <a href="login.html" target="_blank" rel="noopener noreferrer" class="register">เข้าสู่ระบบ</a><!--เข้าระบบ-->
+                  
+       
+        
+                 <img src="image/shopping-cart.png" width="35" height="35">
+       
+                 <img src="image/open-menu.png" width="35" height="35">
+            </div>
         </div>
-        <div>
-        <img src="image/thailand.png"width="35" height="35">
-        </div>
-        <div>
-        <img src="image/bath.png" width="35" height="35">
-        </div>
-        <div>
-        <h3>เข้าสู่ระบบ</h3>
-        </div>
-        <div>
-        <h3>สมัครสมาชิก</h3>
-        </div>
-        <div>
-        <div>
-        <img src="image/shopping-cart.png" width="35" height="35">
-        </div>
-        <div>
-        <img src="image/open-menu.png" width="35" height="35">
-        </div>
-        </div>
+
+
+    
+
+   
+
+    <!------กดค้นหา รร--------->
+    <div class="findticket">
+       <h4>ท่องโลกทั้งใบให้ราคาถูกลง</h4>
+           <div class="narbarSearch">
+              <span>ที่พัก</span>
+              <span>บ้านและอพาร์ตเมนต์</span>
+              <span>ตั๋วเครื่องบิน + ที่พัก</span>
+              <span>ตั๋วเครื่องบิน</span>
+              <span>ทัวร์และตั๋วท่องเที่ยว</span>
+              <span>บริการรับส่งสนามบิน</span>
+           </div>
+          <div><!--ค้นหาเวลาวันที่เข้าพัก-->
+           <span>การเข้าพักข้ามคืน</span>
+           <span>การเข้าพักช่วงกลางวัน</span>
+           <img src="image/search.png" alt="" width="30px" height="30px">
+           <span>วันที่chack in</span><span>วันที่chack out</span>
+           <span>เลือกคน</span>
+           <button type="button">ค้นหา</button>
+          </div>
+        
+    
+   
+    
     </div>
-    <div>
+</div>
+    
 </body>
 <script src="app.js"></script>
 </html>
