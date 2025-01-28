@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <div class="container">
+
+
+      
         <div class="narbar"><!--narbar-->
           <div class="narbar1">
                 <button id="accommodationFlightButton">ตั๋วเครื่องบิน+ที่พัก</button>
@@ -64,30 +66,73 @@
    
 
     <!------กดค้นหา รร--------->
+ 
+
+  <div class="narbarfindticket">
     <div class="findticket">
-       <h4>ท่องโลกทั้งใบให้ราคาถูกลง</h4>
+        <h4 class="text">ท่องโลกทั้งใบให้ราคาถูกลง</h4>
+       
            <div class="narbarSearch">
+            
               <span>ที่พัก</span>
+          
               <span>บ้านและอพาร์ตเมนต์</span>
+            
               <span>ตั๋วเครื่องบิน + ที่พัก</span>
               <span>ตั๋วเครื่องบิน</span>
               <span>ทัวร์และตั๋วท่องเที่ยว</span>
               <span>บริการรับส่งสนามบิน</span>
-           </div>
-          <div><!--ค้นหาเวลาวันที่เข้าพัก-->
-           <span>การเข้าพักข้ามคืน</span>
-           <span>การเข้าพักช่วงกลางวัน</span>
-           <img src="image/search.png" alt="" width="30px" height="30px">
-           <span>วันที่chack in</span><span>วันที่chack out</span>
-           <span>เลือกคน</span>
-           <button type="button">ค้นหา</button>
+            </div>
+      
+          <div class="searchdata"><!--ค้นหาเวลาวันที่เข้าพัก-->
+             
+               <div class="group-data">
+               <button>การเข้าพักข้ามคืน</button><button>การเข้าพักช่วงกลางวัน</button>
+              </div>
+                   <div class="Btnchack">
+                    
+                    
+                    <img src="image/search.png" alt="" width="30px" height="30px"><input type="text">
+                  </div>
+              <div class="Btnchackinday">
+                
+              <p>วันที่ chack in</p><input class="Btnchackin" onclick="choiceDay()" type="date"></input><p>วันที่ chack out</p><input onclick="choiceDay()" class="Btnchackout" type="date"></input>
+              </div>
+             <select name="" id="choiceRoom">
+              <option value="">ผู้ใหญ่ 2 ท่าน</option>
+              <option value="">ห้อง</option>
+              <option value="">ผู้ใหญ่</option>
+              <option value="">เด็ก</option>
+             </select>
+              <div class="containersearch">
+             <button class="Btnsearch"type="submit">ค้นหา</button>
+              </div>
           </div>
         
     
    
-    
     </div>
-</div>
+
+
+
+  </div>
+
+
+  <!------ที่เที่ยวยอดนิยม--------->
+  <div>
+    <h3>ที่เที่ยวยอดนิยมในประเทศไทย</h3>
+    <a href="http://google.com" target="_blank" rel="noopener noreferrer">กรุงเทพ
+      <img src="image/bangkok.jpg" alt="bangkok"width="300px" height="200px">
+    </a>
+
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">ชลบุรี
+      <img src="image/photo-beach-town-view-from.jpg" alt="beach" width="300px" height="200px">
+    </a>
+  <a href="http://google.com" target="_blank" rel="noopener noreferrer">ขอนแก่น
+    <img src="https://cms.dmpcdn.com/travel/2019/11/18/aea40ea0-09d6-11ea-a46b-a993767f0e1c_original.jpg" alt="konkean" width="300px" height="200px">
+  </a>
+  </div>
+
     
 </body>
 <script src="app.js"></script>
