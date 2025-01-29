@@ -13,6 +13,10 @@ body {
     height:auto;
     margin: 0;
 }
+.container{
+    margin-left: 20px;
+    margin-left: 20px;
+}
 
 .narbar{
     display: flex;
@@ -152,6 +156,7 @@ select:hover {
 .text {
     display: inline;
     margin-bottom: 50px;
+    font-size: 25px;
     
 }
 
@@ -310,3 +315,86 @@ width: 800px;
     border-radius: 10px;
 
 }
+/*/ !------ที่เที่ยวยอดนิยม----->/*//*< !-----promotionลดราคา----->ใช้ css ร่วมกัน*/ 
+
+.poppulaBar, .promotion {
+    
+    height: 300px;
+    width: auto;
+    margin: 35px 70px 50px 90px;
+
+    
+}
+
+.poppulaplaceone ,.discount {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    margin: 20px 0px;
+
+
+}
+
+a img{
+    margin-top: 20px;
+    
+    
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+}
+.poppulaplacetwo ,.discounttwo {
+    display: flex;
+    overflow: hidden;
+}
+
+.poppulaplacetwo a {
+    margin: 20px;
+    transition: transform 0.3s ease-in;
+}
+
+.discounttwo a {
+    margin: 20px;
+    transition: transform 0.3s ease-in;
+}
+.btn-right,
+.btn-left {
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+}
+.btn-right:hover,
+.btn-left:hover{
+    border-radius: 60px;
+    background-color: #e6e6e6;
+
+}
+.btn-right img,
+.btn-left img {
+    border-radius: 50%;
+    background-color: aliceblue;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.btn-right {
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+
+}
+
+.btn-left {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*< !-----promotionลดราคา----->*/
+
