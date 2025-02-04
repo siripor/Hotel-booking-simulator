@@ -1,18 +1,21 @@
-*{
+* {
     box-sizing: border-box;
-    margin: 0;
-    
-
+    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: azure;
-    display: flex;
-    flex-direction: column;
-    /* เปลี่ยนเป็น column เพื่อให้เนื้อหาจัดเรียงจากบนลงล่าง */
-    height:auto;
+    background-color: #f8f9fa;
     margin: 0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+        flex-direction: column;
+        /* เปลี่ยนเป็น column เพื่อให้เนื้อหาจัดเรียงจากบนลงล่าง */
+        height: auto;
+        margin: 0;
 }
+
+
 .container{
     margin-left: 20px;
     margin-left: 20px;
@@ -30,6 +33,7 @@ body {
    margin: 5px;
    padding: 5px;
 z-index: 1000; /*ให้ Navbar อยู่ด้านบนสุด */
+border-bottom: 1px solid black;
 
 
    
@@ -45,9 +49,9 @@ z-index: 1000; /*ให้ Navbar อยู่ด้านบนสุด */
     align-items: center;
     width: 100%;
     height: 100px;
-    margin: 20px;
+    margin: 0px;
     
-        padding: 25px;
+   padding: 25px;
    
    
 
@@ -79,7 +83,7 @@ button{
 
 }
 .transport{
-background-color: azure;
+background-color: white;
     border: none;
     
     
@@ -87,15 +91,13 @@ background-color: azure;
    
 
 img {
+    background-color: white;
     position: relative;
     z-index: 5;
 }
 
 
-button:hover{
-    color: blue;
-    font-weight: bold;
-}
+
 
 select{
     border: none;
@@ -126,92 +128,57 @@ select:hover {
         padding: 20px;
 }
 /* !------กดค้นหา รร--------->*/
-
-.narbarfindticket{
-    width: 100%;
-    height: 100%;
-    margin-top: 25px 50px 75px 100px;
-    
+.navbarSearch {
     display: flex;
-    flex-direction: column;
-
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.findticket {
-    display: flex;
-    flex-direction: column;
-   width: 900px;
-   height: 700px;
-   
-    align-items: center;
-   
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 30px auto;
-        /* margin บน-ล่าง และ ซ้าย-ขวา */
-       
-  
-}
-    
-.text {
-    display: inline;
-    margin-bottom: 50px;
-    font-size: 25px;
-    
-}
-
-.narbarSearch{
-    margin: 5px;
-     padding: 5px;
-     border: 1px solid black;
-
-}
-.narbarSearch span{
-    margin: 3px;
-    padding: 2px;
-    background-color: brown;
-    font-size: 20px;
-           
-        }
-
-.searchdata{
-    display: flex;
-    
-    flex-direction: column;
-    
-    width: 900px;
-    height: fit-content;
-    margin: 10px 30px;
-    padding: 5px;
-   
-   
-    
-}
-
-.group-search{
-    margin: 5px;
-    padding:20px;
-    font-size: 18px;
-    
-    text-align: center;
-}
-
-
-
-.Btnchack{
-    
-    width: 850px;
-        height: 80px;
-        margin: 5px;
-        padding: 5px;
-        border: 1px solid black;
-        text-align:left;
-
-}
-.Btnchack input{
-    text-align: left;
+button {
+    padding: 10px 15px;
+    font-size: 16px;
     border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
 }
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/*แบบฟอร์ม*/
+.form-container {
+    max-width: 500px;
+    margin: auto;
+   
+}
+
+.form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 450px;
+    width: 600px;
+   
+}
+
+.hidden {
+    display: none;
+}
+ .typeofplace{
+    margin: 10px;
+    width: 200px;
+    height: 50px;
+ }
+
+
 
 .group-data{
     width: 800px;
@@ -238,6 +205,7 @@ select:hover {
 .Btnchackinday{
     display:flex;
     flex-direction: row;
+    margin: 10px;
 }
 .Btnchackin{
 
@@ -284,17 +252,7 @@ width: 800px;
     padding: 5px;
 }
 
-#choiceRoom{
-    width: 800px;
-        height: 50px;
-        margin: 15px;
-        padding: 5px;
-        text-align: center;
-        background-color: aliceblue;
-        font-size: 16px;
-        border: 1px solid black;
 
-}
 
 .containersearch{
     display: flex;
@@ -396,5 +354,54 @@ a {
     transform: translate(-50%, -50%);
 }
 
-/*< !-----promotionลดราคา----->*/
+/*< !----ส่วนท้าย----->*/
 
+.NarbarFooter{
+    width: auto;
+    height: auto;
+    
+    
+}
+
+
+.Footerone{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    background-color: rgba(208, 208, 208 );
+    justify-content: center;
+   
+
+   
+}
+
+
+
+
+il{
+    margin: 20px;
+    outline-style: none;
+}
+
+
+
+
+/*--ท้ายเว็ปไซด์--*/
+
+.container-Footer {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.Footertwo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: 16px;
+    margin: 15px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}

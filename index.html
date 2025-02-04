@@ -12,34 +12,37 @@
       
         <div class="narbar"><!--narbar-->
           <div class="narbar1">
-                <button id="accommodationFlightButton">ตั๋วเครื่องบิน+ที่พัก</button>
-                 <button id="accommodationBtn">ที่พัก</button>
+                <a href="#hotelForm">ตั๋วเครื่องบิน+ที่พัก</a>
+                 <a href="#">ที่พัก</a>
                <div>
                 
                    <select class="transport" >
                    <option value="">บริการเดินทางขนส่ง</option>
                    <option value="">ตั๋วเครื่องบิน</option>
                    <option value="">รถบัส</option>
+
                    <option value="">รถไฟ</option>
                    <option value="">เรือเฟอร์รารี่</option>
                    <option value="">บริการรับส่งสนามบิน</option>
                    <option value="">บริการเช่ารถ</option>
                    </select>
                </div>
+              
 
-                <div>
-                    <button>
-                    <!-- ปุ่มรูปภาพ -->
+            
+                <div class="dropdown">
+                                
                     <img src="image/more.png" width="30px"  height="30px" id="menuTrigger">
-                    </button>
-                    <!-- เมนูแบบ Select 
-                    <select id="menuSelect">
-                        <option value="tours">ทัวร์และตั๋วท่องเที่ยว</option>
-                        <option value="discounts">คูปองส่วนลด + ข้อเสนอพิเศษ</option>
-                        <option value="esim">eSim (ซิมดิจิทัล)</option>
-                        <option value="guide">คู่มือท่องเที่ยว</option>
-                    </select>-->
+                      <!---
+                     <div class="dropdown-content">
+                      <a href="#">ทัวร์และตั๋วท่องเที่ยว</a>
+                      <a href="#">คูปองส่วนลด + ข้อเสนอพิเศษ</a>
+                      <a href="#">eSim (ซิมดิจิทัล)</a>
+                      <a href="#">คู่มือท่องเที่ยว)</a>
+                    </div> -->
+                  
                 </div>
+             
             </div>
            
         
@@ -67,57 +70,115 @@
 
     <!------กดค้นหา รร--------->
  
-
-  <div class="narbarfindticket">
-    <div class="findticket">
-        <h4 class="text">ท่องโลกทั้งใบให้ราคาถูกลง</h4>
-       
-           <div class="narbarSearch">
-            
-              <span>ที่พัก</span>
-          
-              <span>บ้านและอพาร์ตเมนต์</span>
-            
-              <span>ตั๋วเครื่องบิน + ที่พัก</span>
-              <span>ตั๋วเครื่องบิน</span>
-              <span>ทัวร์และตั๋วท่องเที่ยว</span>
-              <span>บริการรับส่งสนามบิน</span>
-            </div>
-      
-          <div class="searchdata"><!--ค้นหาเวลาวันที่เข้าพัก-->
-             
-               <div class="group-data">
-               <button>การเข้าพักข้ามคืน</button><button>การเข้าพักช่วงกลางวัน</button>
-              </div>
-                   <div class="Btnchack">
-                    
-                    
-                    <img src="image/search.png" alt="" width="30px" height="30px"><input type="text">
-                  </div>
-              <div class="Btnchackinday">
-                
-              <p>วันที่ chack in</p><input class="Btnchackin" onclick="choiceDay()" type="date"></input><p>วันที่ chack out</p><input onclick="choiceDay()" class="Btnchackout" type="date"></input>
-              </div>
-             <select name="" id="choiceRoom">
-              <option value="">ผู้ใหญ่ 2 ท่าน</option>
-              <option value="">ห้อง</option>
-              <option value="">ผู้ใหญ่</option>
-              <option value="">เด็ก</option>
-             </select>
-              <div class="containersearch">
-             <button class="Btnsearch"type="submit">ค้นหา</button>
-              </div>
-          </div>
-        
+<h4 class="text">ท่องโลกทั้งใบให้ราคาถูกลง</h4>
+  
     
-   
-    </div>
+        <!-- แบบฟอร์มที่พัก -->
+       
+<div class="navbarSearch">
+            
+              <button onclick="showForm('hotelForm')">ที่พัก</button>
+          
+              <button onclick="showForm('homeForm')">บ้านและอพาร์ตเมนต์</button>
+            
+              <button onclick="showForm('flightHotelForm')">ตั๋วเครื่องบิน + ที่พัก</button>
+              <button onclick="showForm('flightForm')">ตั๋วเครื่องบิน</button>
+              <button onclick="showForm('tourForm')">ทัวร์และตั๋วท่องเที่ยว</button>
+              <button onclick="showForm('carServiceForm')">บริการรับส่งสนามบิน</button>
+</div>
+            <div class="form-container">
+              <!-- แบบฟอร์มที่พัก -->
+              <div id="hotelForm" class="form hidden">
+                <h2>ค้นหาที่พัก</h2>
+                <button class="typeofplace">การเข้าพักข้ามคืน</button><button class="typeofplace">การเข้าพักช่วงกลางวัน</button>
+                 <div class="Btnchack">
+                
+                <input type="text">
+                 </div>
+                
+                <input type="date">
+                <input type="date">
+               
+                <select>
+                  <option value="">ผู้ใหญ่ 2 ท่าน</option>
+                  <option value="">ห้อง</option>
+                  <option value="">ผู้ใหญ่</option>
+                  <option value="">เด็ก</option>
+                </select>
+                
+                  <button class="Btnsearch" type="submit">ค้นหา</button>
+                
+
+             
+              </div>
+            
+              <!-- แบบฟอร์มบ้านและอพาร์ตเมนต์ -->
+              <div id="homeForm" class="form hidden">
+                <h2>ค้นหาบ้านและอพาร์ตเมนต์</h2>
+                <input type="text" placeholder="เมือง">
+                <input type="date" placeholder="วันที่เข้าพัก">วันที่เข้าพัก
+                <input type="date" placeholder="วันที่เข้าออก">วันที่เข้าออก
+                <button>ค้นหา</button>
+              </div>
+            
+              <!-- แบบฟอร์มตั๋วเครื่องบิน + ที่พัก -->
+              <div id="flightHotelForm" class="form hidden">
+                <h2>จองตั๋วเครื่องบิน + ที่พัก</h2>
+                <select>
+                <option value="">ไป-กลับ</option>
+                <option value="">เที่ยวเดียว</option>
+                </select>
+
+                <select>
+                  <option value="">ชั้นประหยัด</option>
+                  <option value="">ชั้นประหยัดพรีเมียม</option>
+                  <option value="">ชั้นธุรกิจ</option>
+                  <option value="">ชั้นเฟิร์สคลาส</option>
+                </select>
+                
+                <input type="text" placeholder="ปลายทาง">
+                <input type="date">
+                <input type="number" placeholder="จำนวนคน">
+                <input type="number" placeholder="จำนวนห้อง">
+                <input type="checkbox">ค้นหาที่พักในเมืองอื่นหรือวันเข้าพักอื่น
+                <button>ค้นหาที่พัก+เที่ยวบิน</button>
+              </div>
+            
+              <!-- แบบฟอร์มตั๋วเครื่องบิน -->
+              <div id="flightForm" class="form hidden">
+                <h2>จองตั๋วเครื่องบิน</h2>
+                <button>ไป-กลับ</button> <button>ชั้นประหยัด</button>
+                <input type="text">ต้นทาง
+                <input type="text">ปลายทาง
+                <input type="date">วันที่ออกเดิทาง
+                <input type="date">วันที่เดินทางกลับ
+                <input type="number" placeholder="จำนวนคน">
+                
+                <input type="checkbox">จองที่พักด้วย ลดสูงสุด 25%
+                <button>ค้นหาเที่ยวบิน</button>
+              </div>
+            
+              <!-- แบบฟอร์มทัวร์และตั๋วท่องเที่ยว -->
+              <div id="tourForm" class="form hidden">
+                <h2>จองทัวร์และตั๋ว</h2>
+                <input type="text" placeholder="สถานที่">
+                <button>ค้นหา</button>
+              </div>
+            
+              <!-- แบบฟอร์มบริการรับส่งสนามบิน -->
+              <div id="carServiceForm" class="form hidden">
+                <h2>บริการรับส่งสนามบิน</h2>
+                <button>จากสนามบิน</button> <button>ไปสนามบิน</button>
+                <input type="text" placeholder="สนามบินที่ไปรับ">
+                <input type="text" placeholder="สถานที่ไปส่ง">
+                <input type="date"><input type="time">
+                
+                <button>ค้นหา</button>
+              </div>
+            </div>
 
 
-
-  </div>
-
-
+      
   <!------ที่เที่ยวยอดนิยม----->
 <div class="poppulaBar">
   <h2>ที่เที่ยวยอดนิยมในประเทศไทย</h2>
@@ -225,9 +286,9 @@
 
       <!---Footer-->
 
-  <div class="Footer">
-    <div>
-      <ol>ศูนย์ช่วยเหลือ
+  <div class="NarbarFooter">
+    <div class="Footerone">
+      <ul>ศูนย์ช่วยเหลือ
         <li>ขอความช่วยเหลือ</li>
         <li>คำถามพบบ่าย</li>
         <li>นโยบายความเป็นส่วนตัว</li>
@@ -237,7 +298,7 @@
         <li>กฏหมายบริการดิจิทัล(สหภาพยุโรป)</li>
         <li>หลักเกณฑ์ด้านเนื้อนหาและการแจ้งเกี่ยวกับเนื้อหา</li>
         <li>คำชี้แจงเกี่ยวกับการค้าทาสยุดใหม่</li>
-      </ol>
+      </ul>
 
       <ol>บริษัท
         <li>เกี่ยวกับเรา</li>
@@ -268,13 +329,18 @@
       </ol>
     </div>
     <!---ส่วนท้าย-->
-    <div>
-    <p>Coryright &copy; 2005 - 2024 Agoda Company Pte. Ltd สงวนลิขสิทธิ์ตามกฎหมาย</p>
-     <p>Agoda เป๊นส่วนหนึ่งของ Booking Holdings Inc. ผู้ให้บริการท่องเที่ยวออนไลน์และบริการที่เกี่ยวข้องชั้นนำระดับโลก </p>
+  <div class="container-Footer">
+    <div class="Footertwo">
+      
+      <div class="container-Footer">Coryright &copy; 2005 - 2024 Agoda Company Pte. Ltd สงวนลิขสิทธิ์ตามกฎหมาย</div>
+      
+     <div class="container-Footer">Agoda เป๊นส่วนหนึ่งของ Booking Holdings Inc. ผู้ให้บริการท่องเที่ยวออนไลน์และบริการที่เกี่ยวข้องชั้นนำระดับโลก </div>
     </div>
   </div>
+  </div>
 </div>
-    
+   
 </body>
-<script></script>
+
+<script src="app.js"></script>
 </html>
